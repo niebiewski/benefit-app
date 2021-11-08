@@ -1,0 +1,12 @@
+<div class="d-flex h-100">
+  <div class="tile h-100">
+    <ul>
+      <li *ngFor="let item of dataSource$ | async">
+        <a [routerLink]="['/vouchers', item.id]" routerLinkActive="active">{{
+          item.name
+        }}</a>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</div>
